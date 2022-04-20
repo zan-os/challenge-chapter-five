@@ -23,6 +23,7 @@ class DetailViewModel : ViewModel() {
     val showLoading: LiveData<Boolean> = _showLoading
 
     fun getMovieDetail(id: Int) {
+        _showLoading.value = true
         val client = ApiConfig.getApiService().getDetail(id)
         client.enqueue(object : Callback<DetailMovieResponse> {
             override fun onResponse(
@@ -31,6 +32,7 @@ class DetailViewModel : ViewModel() {
             ) {
                 val code = response.code()
                 if (code == 200) {
+                    _showLoading.value = false
                     _detailMovie.value = response.body()
                 } else {
                     Log.e("Failure", "onFailure: ${response.message()}")
@@ -56,13 +58,11 @@ class DetailViewModel : ViewModel() {
                     _showLoading.value = false
                     _castList.value = response.body()?.cast
                 } else {
-                    _showLoading.value = true
                     Log.e("Failure", "onFailure: ${response.message()}")
                 }
             }
 
             override fun onFailure(call: Call<CreditsResponse>, t: Throwable) {
-                _showLoading.value = true
                 Log.e("Failure", "onFailure: ${t.message}")
             }
         })

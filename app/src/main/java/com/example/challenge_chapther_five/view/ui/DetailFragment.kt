@@ -36,11 +36,15 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         detailViewModel.getMovieDetail(args.id)
+
         detailViewModel.detailMovie.observe(requireActivity()) { movie ->
             binding.apply {
                 val ratingText = getString(R.string.get_rating, movie.voteAverage.toString())
+                val durationText = getString(R.string.get_duration, movie.runtime.toString())
                 ratingTextView.text = ratingText
-
+                movieDurationTextView.text = durationText
+                movieLanguageTextView.text = movie.spokenLanguages[0].name
+                movieReleaseDateTextView.text = movie.releaseDate
                 titleTextView.text = movie.title
                 overviewTextView.text = movie.overview
                 loadPoster(movie.posterPath, posterImageView)
@@ -48,6 +52,7 @@ class DetailFragment : Fragment() {
         }
 
         detailViewModel.getMovieCast(args.id)
+
         detailViewModel.castList.observe(requireActivity()) { cast ->
             showList(cast)
         }
