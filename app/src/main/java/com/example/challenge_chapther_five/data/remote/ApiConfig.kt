@@ -1,4 +1,4 @@
-package com.example.challenge_chapther_five.data.network
+package com.example.challenge_chapther_five.data.remote
 
 import androidx.viewbinding.BuildConfig
 import okhttp3.OkHttpClient

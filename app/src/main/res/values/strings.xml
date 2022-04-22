@@ -21,4 +21,19 @@
     <string name="language">Language</string>
     <string name="release_date">Release Date</string>
     <string name="make_sure_you_have_internet_connection">Make sure you have internet connection</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="daftar">Daftar</string>
+    <string name="login">Login</string>
+    <string name="belum_punya_akun">Belum punya akun?</string>
+    <string name="sudah_punya_akun">Sudah punya akun?</string>
+    <string name="welcome_username">Welcome, Username</string>
+    <string name="profile">Profile</string>
+    <string name="register">Register</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="alamat">Alamat</string>
+    <string name="update">Update</string>
+    <string name="logout">Logout</string>
 </resources>

@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.challenge_chapther_five.data.network.ApiConfig
+import com.example.challenge_chapther_five.data.remote.ApiConfig
 import com.example.challenge_chapther_five.data.response.CastItem
 import com.example.challenge_chapther_five.data.response.CreditsResponse
 import com.example.challenge_chapther_five.data.response.DetailMovieResponse

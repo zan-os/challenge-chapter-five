@@ -1,4 +1,4 @@
-package com.example.challenge_chapther_five.view.ui
+package com.example.challenge_chapther_five.view.ui.detail
 
 import android.os.Bundle
 import android.view.LayoutInflater

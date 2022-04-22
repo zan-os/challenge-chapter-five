@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.challenge_chapther_five.data.response.ResultsItem
 import com.example.challenge_chapther_five.databinding.MovieItemContainerBinding
-import com.example.challenge_chapther_five.view.ui.MainFragmentDirections
+import com.example.challenge_chapther_five.view.ui.main.MainFragmentDirections
 
 class MovieAdapter(private val listMovie: List<ResultsItem>) :
     RecyclerView.Adapter<MovieAdapter.ViewHolder>() {

@@ -1,4 +1,4 @@
-package com.example.challenge_chapther_five.view.ui
+package com.example.challenge_chapther_five.view.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.challenge_chapther_five.R
 import com.example.challenge_chapther_five.data.response.ResultsItem
 import com.example.challenge_chapther_five.databinding.FragmentMainBinding
 import com.example.challenge_chapther_five.view.adapter.MovieAdapter
@@ -29,6 +31,8 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        navigateToProfile()
+
         mainViewModel.listMovie.observe(requireActivity()) { movie ->
             showList(movie)
         }
@@ -54,6 +58,12 @@ class MainFragment : Fragment() {
             View.VISIBLE
         } else {
             View.GONE
+        }
+    }
+
+    private fun navigateToProfile() {
+        binding.profileButton.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_profileFragment)
         }
     }
 

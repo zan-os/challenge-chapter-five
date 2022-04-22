@@ -10,4 +10,5 @@
     <color name="blue_accent">#FFDBE3FF</color>
     <color name="text_blue">#FF88A4E8</color>
     <color name="black05">#FFFAFA</color>
+    <color name="active_blue">#FF388BF2</color>
 </resources>
